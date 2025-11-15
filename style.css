@@ -1,0 +1,216 @@
+:root {
+  --primary-green: #22c55e;
+  --text: #0f172a;
+  --muted: #475569;
+  --bg: #f3f4f6;
+  --card: #ffffff;
+  --header-bg: #1e293b;
+  --button-bg: #22c55e;
+  --button-hover: #16a34a;
+  --border: #e5e7eb;
+}
+
+/* Base Reset */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, "Khmer OS", "Khmer OS System", Segoe UI, Roboto, sans-serif;
+}
+
+/* Topbar */
+.topbar {
+  background: var(--header-bg);
+  color: #fff;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.topbar h1 {
+  margin: 0;
+  font-size: 18px;
+}
+
+/* Tabs */
+.tabs button {
+  margin-left: 8px;
+  padding: 8px 12px;
+  background: var(--button-bg);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.tabs button.active {
+  box-shadow: 0 0 0 2px #fff3 inset, 0 0 0 2px #fff;
+}
+
+.tabs button:hover {
+  background: var(--button-hover);
+}
+
+/* App Layout */
+#app {
+  padding: 20px;
+  display: grid;
+  gap: 16px;
+}
+
+/* Card Sections */
+section.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 16px;
+}
+
+section.card h2 {
+  margin-top: 0;
+  font-size: 18px;
+  color: var(--primary-green);
+}
+
+/* Grid Layouts */
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+@media (max-width: 900px) {
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Lists */
+.list {
+  display: grid;
+  gap: 10px;
+}
+
+/* Transaction Items */
+.tx-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 10px 12px;
+}
+
+/* Badges */
+.badge {
+  background: var(--primary-green);
+  color: #fff;
+  border-radius: 999px;
+  padding: 6px 10px;
+  font-weight: 700;
+  margin-right: 8px;
+  min-width: 36px;
+  text-align: center;
+  display: inline-block;
+}
+
+/* KPI Tags */
+.kpi {
+  display: inline-block;
+  background: #f8fafc;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 8px 10px;
+  color: var(--muted);
+  margin-left: 8px;
+}
+
+/* Form Layout */
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 12px;
+}
+
+@media (max-width: 700px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+label {
+  font-size: 14px;
+  color: var(--muted);
+  display: block;
+  margin-bottom: 6px;
+}
+
+input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: #fff;
+  font-size: 14px;
+}
+
+/* Buttons */
+button.primary {
+  background: var(--button-bg);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+button.primary:hover {
+  background: var(--button-hover);
+}
+
+/* Chart Containers */
+.chart-wrap {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 10px;
+}
+
+/* Controls */
+.controls {
+  display: flex;
+  gap: 8px;
+  margin: 6px 0 12px;
+}
+
+.controls .seg {
+  border: 1px solid var(--border);
+  background: #fff;
+  color: var(--text);
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.controls .seg.active {
+  border-color: var(--primary-green);
+  color: var(--primary-green);
+}
+
+/* Footer */
+.footnote {
+  padding: 12px 20px;
+  color: var(--muted);
+  text-align: center;
+}

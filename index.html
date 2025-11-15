@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Meta -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="description" content="Web Finance Report Dashboard — Statement, Activity, Wallets, Transactions" />
+
+  <!-- Title -->
+  <title> Finance Report Dashboard</title>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Charts (optional, used by script.js) -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js" defer></script>
+
+  <!-- App script -->
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <!-- Skip link for accessibility -->
+  <a href="#main" class="visually-hidden-focusable">Skip to main content</a>
+
+  <!-- Top navigation -->
+  <header class="topbar" role="banner">
+    <h1 id="site-title">Finance Report</h1>
+    <nav class="tabs" aria-label="Primary">
+      <button type="button" data-page="statement" class="active" aria-current="page">Statement</button>
+      <button type="button" data-page="activity">Activity</button>
+      <button type="button" data-page="wallet">Wallet</button>
+      <button type="button" data-page="transactions">Transactions</button>
+    </nav>
+  </header>
+
+  <!-- Main content -->
+  <main id="main" role="main">
+    <div id="app" aria-live="polite" aria-busy="false"></div>
+  </main>
+
+  
+  <footer class="footnote" role="contentinfo">
+    <small>Dynamic Fusion CO.,LTD</small>
+  </footer>
+
+ 
+  <style>
+    .visually-hidden-focusable:not(:focus):not(:active) {
+      position: absolute !important;
+      height: 1px; width: 1px;
+      overflow: hidden; clip: rect(1px, 1px, 1px, 1px);
+      white-space: nowrap; border: 0; padding: 0; margin: -1px;
+    }
+  </style>
+</body>
+</html>
